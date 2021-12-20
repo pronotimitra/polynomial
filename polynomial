@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <conio.h>
+struct node
+{
+	int num;
+	int coeff;
+	struct next *link;
+};
+struct node *start = NULL;
+struct node *create(struct node *q);
+struct node *display(struct node *q);
+int main()
+{
+	int ch;
+	do
+	{
+		printf("enter 0 to exit");
+		printf("\n enter 1 to create a ");
+		printf("\n enter 2 to display the polynomial");
+		scanf("%d",&ch);
+	}
+	switch(ch){
+		case 0:
+		printf("\n program terminated successfully");
+		exit(0);
+		case 1:
+		start=create_poly(start);
+		break;
+		case 2:
+		start=display_poly(start);
+		break;
+		default:
+		pritnf("\nwrong input");
+	}
+}while(ch!=0);
+}
+struct node*create_poly(struct node *start){
+	start node *new_node,*ptr;
+	int n,c;
+	printf("enter -1 to stop the creation of node");
+	printf("enter the number :");
+	scanf("%d",&n);
+	printf("enter cofficient:");
+	scanf("%d",&c);
+	while(n!=-1){
+		if(start==NULL){
+			new_node(struct node*)malloc(sizeof(struct node));
+			new_node->num=n;
+			new_node->coeff=c;
+			new_node->next=NULL;
+		}
+	}
+}
